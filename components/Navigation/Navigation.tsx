@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { CSSProperties } from "react";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher";
 import NavLinks from "./NavigationLinks";
 import Github from "@/public/Icons/GithubIcon";
 import XformerlyTwitter from "@/public/Icons/XIcon";
