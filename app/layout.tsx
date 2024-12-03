@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     description:
       "A modern UI component library for Next.js applications with beautiful, responsive and accessible components",
     type: "website",
-    url: "https://combui.com",
+    url: "https://www.combui.tech/",
     siteName: "CombUI",
   },
   alternates: {
-    canonical: "https://combui.com",
+    canonical: "https://www.combui.tech/",
   },
-  metadataBase: new URL("https://combui.com"),
+  metadataBase: new URL("https://www.combui.tech/"),
   keywords: [
     "UI library",
     "React components",

@@ -14,7 +14,6 @@ import { PiCodeBlockBold } from "react-icons/pi";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { cn } from "@/lib/utils";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
-import AnimatedShinyText from "../ui/animated-shiny-text";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -33,7 +32,7 @@ function HeroCreated() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease }}
-      className="flex items-center mb-8"
+      className="flex items-center mb-6"
     >
       <div className="flex gap-5">
         <div className="flex flex-row items-center justify-center ">
@@ -42,10 +41,10 @@ function HeroCreated() {
         <div className="z-10 flex items-center justify-center">
           <div
             className={cn(
-              "group rounded-full border border-black/5 bg-secondary text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+              "group rounded-full border border-secondary  text-base  transition-all ease-in hover:cursor-pointer bg-black dark:bg-white dark:hover:bg-tertiary hover:bg-tertiary"
             )}
           >
-            <AnimatedShinyText className="inline-flex text-sm items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+            <div className="inline-flex text-xs lg:text-sm items-center justify-center px-4 py-1 transition ease-out text-white dark:text-black group-hover:text-primary group-hover:dark:text-primary">
               <span>
                 {" "}
                 Created By{" "}
@@ -57,8 +56,8 @@ function HeroCreated() {
                   Bugra Er
                 </a>
               </span>
-              <HiOutlineArrowLongRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-            </AnimatedShinyText>
+              <HiOutlineArrowLongRight className="ml-3 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+            </div>
           </div>
         </div>
       </div>
@@ -208,7 +207,7 @@ function HeroCTA() {
         transition={{ duration: 0.8, ease: ease }}
       >
         <Link href="/components">
-          <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl flex-col items-center justify-center space-y-4 sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
+          <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl items-center justify-center sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
             <BiSolidComponent
               className="-ms-1 me-2 "
               size={16}
@@ -234,7 +233,7 @@ function HeroCTA() {
         transition={{ duration: 0.8, ease: ease }}
       >
         <Link href="/blocks">
-          <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl flex-col items-center justify-center space-y-4 sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
+          <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl  items-center justify-center sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
             <PiCodeBlockBold
               className="-ms-1 me-2"
               size={16}
@@ -258,7 +257,7 @@ function HeroCTA() {
 export default function HeroSection() {
   return (
     <section id="hero">
-      <div className="relative flex w-full flex-col items-center justify-start px-4 pt-16 sm:px-6 sm:pt-24 md:pt-24 lg:px-8">
+      <div className="relative flex w-full flex-col items-center justify-start px-4 pt-16 sm:px-6 sm:pt-24 md:pt-12 lg:px-8">
         <HeroCreated />
         <HeroTitles />
         <HeroCTA />

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     description:
       "Explore our collection of reusable UI components for modern web applications",
     type: "website",
-    url: "https://combui.com/components",
+    url: "https://www.combui.tech/components",
     siteName: "CombUI",
   },
   alternates: {
-    canonical: "https://combui.com/components",
+    canonical: "https://www.combui.tech/components",
   },
 };
 

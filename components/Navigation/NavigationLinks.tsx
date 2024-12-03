@@ -11,7 +11,7 @@ type NavLinkProps = Readonly<{
 }>;
 
 export default function NavLinks({ href, children }: NavLinkProps) {
-  const pathname = `/${usePathname().split("/")[1]}`;
+  const pathname = `/${usePathname()?.split("/")[1] ?? ""}`;
   const active = pathname === href;
   return (
     <Link

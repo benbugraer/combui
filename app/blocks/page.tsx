@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     description:
       "Discover pre-built UI blocks and patterns to accelerate your development process",
     type: "website",
-    url: "https://combui.com/blocks",
+    url: "https://www.combui.tech/blocks",
     siteName: "CombUI",
   },
   alternates: {
-    canonical: "https://combui.com/blocks",
+    canonical: "https://www.combui.tech/blocks",
   },
 };
 
