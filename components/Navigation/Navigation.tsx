@@ -27,12 +27,12 @@ const social = [
 export default function Navigation() {
   return (
     <header
-      className="bg-tertiary  lg:rounded-full lg:w-8/12 w-full  mx-auto lg:my-6 top-0 sticky z-40  backdrop-blur-xl animate-in-reverse shadow-xl"
+      className="bg-tertiary  lg:rounded-full lg:w-5/12 w-full   mx-auto lg:my-6 top-0 sticky z-40  backdrop-blur-xl animate-in-reverse shadow-xl"
       style={{ "--index": 0 } as CSSProperties}
     >
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0 shadow-2xl"></hr>
 
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-12 items-center">
         <Link
           href="/"
           className="relative text-lg font-normal tracking-tighter flex items-center space-x-0"

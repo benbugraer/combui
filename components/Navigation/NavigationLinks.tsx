@@ -17,8 +17,8 @@ export default function NavLinks({ href, children }: NavLinkProps) {
     <Link
       href={href}
       className={clsx(
-        "px-4 py-2.5 rounded-lg text-sm font-light hover:text-secondary transition-all duration-300 hover:duration-300 hover:transition-all ease-linear",
-        active ? "bg-secondary" : "text-primary "
+        "px-4 py-1.5 rounded-lg text-sm font-light hover:text-primary transition-all duration-300 hover:duration-300 hover:transition-all ease-linear",
+        active ? "text-primary" : "text-tertiary "
       )}
     >
       {children}
