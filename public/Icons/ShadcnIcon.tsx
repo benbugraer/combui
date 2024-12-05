@@ -1,15 +1,19 @@
-import * as React from "react";
+import React from "react";
 import type { SVGProps } from "react";
-const Shadcnui = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 256 256"
-    width="1em"
-    height="1em"
-    {...props}
-  >
-    <path fill="none" d="M0 0h256v256H0z" />
-    <path fill="none" stroke="#fff" d="M208 128l-80 80M192 40L40 192" />
-  </svg>
-);
-export default Shadcnui;
+
+export function SimpleIconsShadcnui(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="M22.219 11.784L11.784 22.219a1.045 1.045 0 0 0 1.476 1.476L23.695 13.26a1.045 1.045 0 0 0-1.476-1.476M20.132.305L.305 20.132a1.045 1.045 0 0 0 1.476 1.476L21.608 1.781A1.045 1.045 0 0 0 20.132.305"
+      ></path>
+    </svg>
+  );
+}

@@ -2,18 +2,19 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { SiShadcnui } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
-import { IoLogoReact } from "react-icons/io5";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiTailwindcss } from "react-icons/si";
+import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BiSolidComponent } from "react-icons/bi";
-import { PiCodeBlockBold } from "react-icons/pi";
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import Nextjs from "@/public/Icons/NextIcon";
+import React from "@/public/Icons/ReactIcon";
+import TypeScript from "@/public/Icons/TypeScriptIcon";
+import { TablerBrandFramerMotion } from "@/public/Icons/MotionIcon";
+import { SimpleIconsShadcnui } from "@/public/Icons/ShadcnIcon";
+import TailwindCSS from "@/public/Icons/TailwindIcon";
 import { cn } from "@/lib/utils";
-import { AnimatedTooltip } from "../ui/animated-tooltip";
+import { AnimatedTooltip } from "../../ui/animated-tooltip";
+import HeroVideoDialog from "../../ui/hero-video-dialog";
+import { ClarityBlocksGroupSolid } from "@/public/Icons/BlocksIcon";
+import { QlementineIconsBlocks16 } from "@/public/Icons/ComponentsIcon";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -56,7 +57,7 @@ function HeroCreated() {
                   Bugra Er
                 </a>
               </span>
-              <HiOutlineArrowLongRight className="ml-3 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+              <MoveRight className="ml-3 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
             </div>
           </div>
         </div>
@@ -126,37 +127,37 @@ function HeroTitles() {
         >
           {[
             {
-              Icon: RiNextjsFill,
+              Icon: Nextjs,
               href: "https://nextjs.org/",
               color: "text-black dark:text-white",
               title: "Next.js",
             },
             {
-              Icon: IoLogoReact,
+              Icon: React,
               href: "https://react.dev/",
               color: "text-[#61DAFB]",
               title: "React.js",
             },
             {
-              Icon: BiLogoTypescript,
+              Icon: TypeScript,
               href: "https://www.typescriptlang.org/",
               color: "text-[#3178C6]",
               title: "Typescript",
             },
             {
-              Icon: SiTailwindcss,
+              Icon: TailwindCSS,
               href: "https://tailwindcss.com/",
               color: "text-[#06B6D4]",
               title: "Tailwind CSS",
             },
             {
-              Icon: SiShadcnui,
+              Icon: SimpleIconsShadcnui,
               href: "https://ui.shadcn.com/",
               color: "text-black dark:text-white",
               title: "Shadcn UI",
             },
             {
-              Icon: TbBrandFramerMotion,
+              Icon: TablerBrandFramerMotion,
               href: "https://www.framer.com/motion/",
               color: "text-[#000] dark:text-[#fff] ",
               title: "Framer Motion",
@@ -208,14 +209,13 @@ function HeroCTA() {
       >
         <Link href="/components">
           <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl items-center justify-center sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
-            <BiSolidComponent
+            <ClarityBlocksGroupSolid
               className="-ms-1 me-2 "
-              size={16}
               strokeWidth={2}
               aria-hidden="true"
             />
             Components
-            <HiOutlineArrowLongRight
+            <MoveRight
               className="-me-1 ms-2  transition-transform group-hover:translate-x-0.5"
               size={16}
               strokeWidth={2}
@@ -234,14 +234,13 @@ function HeroCTA() {
       >
         <Link href="/blocks">
           <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl  items-center justify-center sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
-            <PiCodeBlockBold
+            <QlementineIconsBlocks16
               className="-ms-1 me-2"
-              size={16}
               strokeWidth={2}
               aria-hidden="true"
             />
             Blocks
-            <HiOutlineArrowLongRight
+            <MoveRight
               className="-me-1 ms-2 transition-transform group-hover:translate-x-0.5"
               size={16}
               strokeWidth={2}
@@ -254,6 +253,25 @@ function HeroCTA() {
   );
 }
 
+function HeroVideo() {
+  return (
+    <motion.div
+      className="relative mx-auto flex w-full items-center justify-center"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.2, duration: 1, ease }}
+    >
+      <HeroVideoDialog
+        animationStyle="from-center"
+        videoSrc="https://www.youtube.com/embed/25IzTkU3En4"
+        thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+        thumbnailAlt="Thumbnail"
+        className="border-2 border-primary rounded-lg shadow-lg max-w-screen-lg mt-16"
+      />
+    </motion.div>
+  );
+}
+
 export default function HeroSection() {
   return (
     <section id="hero">
@@ -261,7 +279,7 @@ export default function HeroSection() {
         <HeroCreated />
         <HeroTitles />
         <HeroCTA />
-        <div className="pointer-events-none absolute inset-x-0 -bottom-12 h-1/3 bg-gradient-to-t from-background via-background to-transparent lg:h-1/4"></div>
+        <HeroVideo />
       </div>
     </section>
   );

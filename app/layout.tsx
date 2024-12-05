@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
 import clsx from "clsx";
-import Navigation from "@/components/Navigation/Navigation";
+import Navigation from "@/components/Sections/Navigation/Navigation";
 import { ThemeProvider } from "next-themes";
 
 const outfit = Outfit({

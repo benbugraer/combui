@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Moon, Sun, Monitor } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -38,7 +38,7 @@ export default function ThemeSwitcher() {
           {theme === "system" && <Monitor className="h-4 w-4" />}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mr-[5.2rem] space-y-1">
+      <DropdownMenuContent className="mr-[4.7rem] space-y-1">
         <DropdownMenuItem
           onClick={() => handleThemeChange("light")}
           className={theme === "light" ? "bg-tertiary" : ""}

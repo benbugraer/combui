@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { CSSProperties } from "react";
-import ThemeSwitcher from "../ThemeSwitcher";
+import ThemeSwitcher from "@/components/Themes/ThemeSwitcher";
 import NavLinks from "./NavigationLinks";
 import Github from "@/public/Icons/GithubIcon";
 import XformerlyTwitter from "@/public/Icons/XIcon";
@@ -27,7 +27,7 @@ const social = [
 export default function Navigation() {
   return (
     <header
-      className="bg-tertiary  lg:rounded-full lg:w-5/12 w-full   mx-auto lg:my-6 top-0 sticky z-40  backdrop-blur-xl animate-in-reverse shadow-xl"
+      className="bg-tertiary backdrop-blur-3xl lg:rounded-full lg:w-5/12 w-full mx-auto lg:my-6 top-0 sticky z-40 animate-in-reverse shadow-xl"
       style={{ "--index": 0 } as CSSProperties}
     >
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0 shadow-2xl"></hr>
