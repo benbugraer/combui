@@ -1,5 +1,7 @@
-import { Computer, Network, Plus } from "lucide-react";
-import { Building2 } from "lucide-react";
+import { Plus, Copy } from "lucide-react";
+import { SolarLibraryBold } from "@/public/Icons/LibraryIcon";
+import { ClarityBlocksGroupSolid } from "@/public/Icons/ComponentsIcon";
+import { UisWebGrid } from "@/public/Icons/WebIcon";
 
 import {
   Accordion,
@@ -12,24 +14,31 @@ import { FeatureCircle } from "./FeatureCircle";
 const features = [
   {
     id: "1",
-    name: "Build faster.",
+    name: "Beautiful and performant components",
     description:
-      "Get up and running in no time with pre-configured settings and best practices. Say goodbye to setup and focus on what truly matters - building your application.",
-    icon: Computer,
+      "CombUI is built with performance in mind. With a minimal footprint and efficient code, your application will be much more good looking.",
+    icon: ClarityBlocksGroupSolid,
   },
   {
     id: "2",
-    name: "Focus on business logic.",
+    name: "Different UI libraries working together",
     description:
-      "Concentrate on solving business problems instead of dealing with the repetitive setup.",
-    icon: Building2,
+      "By combining different UI libraries, we create much better components and therefore much better looks for your projects.",
+    icon: SolarLibraryBold,
   },
   {
     id: "3",
-    name: "Ready for scale.",
+    name: "Cust copy and paste",
     description:
-      "Prepare for growth from day one. With built-in optimizations and scalable architecture, your application will be ready to handle increased traffic and complexity.",
-    icon: Network,
+      "Just copy and paste the components you want to use and customize for your needs.",
+    icon: Copy,
+  },
+  {
+    id: "4",
+    name: "Ready-made website blocks ",
+    description:
+      "Quickly build your own website with ready-made website blocks. Remember you can customize them according to your own requirements.",
+    icon: UisWebGrid,
   },
 ];
 
@@ -40,12 +49,12 @@ export default function Features() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <p className="mt-2 font-semibold tracking-tight dark:text-white text-gray-900">
-                Nextjs Starter Kit: A faster way to production
-              </p>
+              <h1 className="mt-2 font-semibold tracking-tight text-2xl">
+                Best way to look good in your projects with CombUI
+              </h1>
               <p className="mt-6 leading-8 text-gray-600 dark:text-gray-400">
-                Accelerate your development with this powerful Nextjs Starter
-                Kit
+                CombUI is a modern UI component library for Next.js
+                applications.
               </p>
               <div className="mt-10">
                 <Accordion
@@ -61,16 +70,16 @@ export default function Features() {
                       className="py-2"
                     >
                       <AccordionPrimitive.Header className="flex">
-                        <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-2 text-left text-[15px] font-semibold leading-6 transition-all [&[data-state=open]>svg]:rotate-180">
+                        <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-2 text-left text-[15px] font-semibold leading-6 transition-all [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
                           <span className="flex items-center gap-3">
                             <span
-                              className="flex size-10 shrink-0 items-center justify-center rounded-full border border-border"
+                              className="flex size-10 shrink-0 items-center justify-center rounded-full border border-secondary"
                               aria-hidden="true"
                             >
                               <feature.icon
                                 size={16}
                                 strokeWidth={2}
-                                className="opacity-60"
+                                className="opacity-60 w-5 h-5"
                               />
                             </span>
                             <span className="flex flex-col space-y-1">

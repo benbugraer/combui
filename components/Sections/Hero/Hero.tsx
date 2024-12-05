@@ -13,8 +13,8 @@ import TailwindCSS from "@/public/Icons/TailwindIcon";
 import { cn } from "@/lib/utils";
 import { AnimatedTooltip } from "../../ui/animated-tooltip";
 import HeroVideoDialog from "../../ui/hero-video-dialog";
-import { ClarityBlocksGroupSolid } from "@/public/Icons/BlocksIcon";
-import { QlementineIconsBlocks16 } from "@/public/Icons/ComponentsIcon";
+import { QlementineIconsBlocks16 } from "@/public/Icons/BlocksIcon";
+import { ClarityBlocksGroupSolid } from "@/public/Icons/ComponentsIcon";
 
 const ease = [0.16, 1, 0.3, 1];
 

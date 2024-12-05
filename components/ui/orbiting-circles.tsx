@@ -1,15 +1,5 @@
 import { cn } from "@/lib/utils";
 
-export interface OrbitingCirclesProps {
-  className?: string;
-  children?: React.ReactNode;
-  reverse?: boolean;
-  duration?: number;
-  delay?: number;
-  radius?: number;
-  path?: boolean;
-}
-
 export default function OrbitingCircles({
   className,
   children,
@@ -18,14 +8,22 @@ export default function OrbitingCircles({
   delay = 10,
   radius = 50,
   path = true,
-}: OrbitingCirclesProps) {
+}: {
+  className?: string;
+  children?: React.ReactNode;
+  reverse?: boolean;
+  duration?: number;
+  delay?: number;
+  radius?: number;
+  path?: boolean;
+}) {
   return (
     <>
       {path && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
-          className="pointer-events-none absolute inset-0 size-full"
+          className="pointer-events-none absolute inset-0 h-full w-full"
         >
           <circle
             className="stroke-black/10 stroke-1 dark:stroke-white/10"
@@ -33,6 +31,7 @@ export default function OrbitingCircles({
             cy="50%"
             r={radius}
             fill="none"
+            strokeDasharray={"10 4"}
           />
         </svg>
       )}
@@ -46,9 +45,10 @@ export default function OrbitingCircles({
           } as React.CSSProperties
         }
         className={cn(
-          "absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full border border-neutral-200 bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10 dark:border-neutral-800",
+          `absolute flex h-full w-full transform-gpu animate-orbit items-center justify-center rounded-full border
+           [animation-delay:calc(var(--delay)*1000ms)] `,
           { "[animation-direction:reverse]": reverse },
-          className,
+          className
         )}
       >
         {children}
