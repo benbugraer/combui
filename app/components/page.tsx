@@ -18,5 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default function ComponentsPage() {
-  return <div>Components Page</div>;
+  return (
+    <div>
+      <h1>Components page here</h1>
+    </div>
+  );
 }

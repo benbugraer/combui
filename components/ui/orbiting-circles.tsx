@@ -31,7 +31,7 @@ export default function OrbitingCircles({
             cy="50%"
             r={radius}
             fill="none"
-            strokeDasharray={"10 4"}
+            strokeDasharray={"0 0"}
           />
         </svg>
       )}

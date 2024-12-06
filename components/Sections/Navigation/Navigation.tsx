@@ -41,8 +41,8 @@ export default function Navigation() {
             Comb<span className="font-black">UI</span>
           </span>
         </Link>
-        <nav className="hidden xl:flex items-center ml-12 text-sm font-medium">
-          <ul className="hidden md:flex gap-1 items-center">
+        <nav>
+          <ul className="hidden md:flex gap-1 items-center justify-center text-center">
             {navItems.map((items) => (
               <li key={items.href}>
                 <NavLinks href={items.href}>{items.label}</NavLinks>

@@ -18,5 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default function BlocksPage() {
-  return <div>Blocks</div>;
+  return (
+    <div>
+      <h1>Blocks Page Here</h1>
+    </div>
+  );
 }
