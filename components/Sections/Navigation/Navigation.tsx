@@ -27,7 +27,7 @@ const social = [
 export default function Navigation() {
   return (
     <header
-      className="bg-tertiary backdrop-blur-3xl lg:rounded-full lg:w-5/12 w-full mx-auto lg:my-6 top-0 sticky z-40 animate-in-reverse shadow-xl"
+      className="bg-tertiary backdrop-blur-3xl lg:rounded-full lg:w-6/12 w-full mx-auto lg:my-6 top-0 sticky z-40 animate-in-reverse shadow-xl h-[var(--header-height)]"
       style={{ "--index": 0 } as CSSProperties}
     >
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0 shadow-2xl"></hr>
@@ -41,7 +41,7 @@ export default function Navigation() {
             Comb<span className="font-black">UI</span>
           </span>
         </Link>
-        <nav>
+        <nav className="ml-auto">
           <ul className="hidden md:flex gap-1 items-center justify-center text-center">
             {navItems.map((items) => (
               <li key={items.href}>

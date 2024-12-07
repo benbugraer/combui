@@ -275,7 +275,7 @@ function HeroVideo() {
 export default function HeroSection() {
   return (
     <section id="hero">
-      <div className="relative flex w-full flex-col items-center justify-start px-4 pt-16 sm:px-6 sm:pt-24 md:pt-12 lg:px-8">
+      <div className="relative flex w-full flex-col items-center justify-start px-4 pt-16 sm:px-6 sm:pt-24 md:pt-12 lg:px-8 ">
         <HeroCreated />
         <HeroTitles />
         <HeroCTA />
