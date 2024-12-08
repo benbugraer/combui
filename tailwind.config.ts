@@ -3,10 +3,13 @@ import type { Config } from "tailwindcss";
 export default {
   darkMode: ["class"],
   content: [
+    "./node_modules/fumadocs-ui/dist/**/*.ts",
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./content/**/*.mdx",
+    "./mdx-components.tsx",
   ],
   prefix: "",
   theme: {

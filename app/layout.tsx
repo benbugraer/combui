@@ -4,6 +4,7 @@ import { Outfit } from "next/font/google";
 import clsx from "clsx";
 import Navigation from "@/components/Sections/Navigation/Navigation";
 import { ThemeProvider } from "next-themes";
+import { RootProvider } from "fumadocs-ui/provider";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -52,17 +53,19 @@ export default function RootLayout({
           outfit.className
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navigation />
-          <div className="relative flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip mx-auto px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-            {children}
-          </div>
-        </ThemeProvider>
+        <RootProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navigation />
+            <div className="relative flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip mx-auto px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+              {children}
+            </div>
+          </ThemeProvider>
+        </RootProvider>
       </body>
     </html>
   );
