@@ -1,9 +1,11 @@
 import type { Config } from "tailwindcss";
+import { createPreset } from "fumadocs-ui/tailwind-plugin";
 
 export default {
   darkMode: ["class"],
+  presets: [createPreset()],
   content: [
-    "./node_modules/fumadocs-ui/dist/**/*.ts",
+    "./node_modules/fumadocs-ui/dist/**/*.js",
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
@@ -15,6 +17,7 @@ export default {
   theme: {
     container: {
       padding: "2rem",
+      center: true,
       screens: {
         "2xl": "1400px",
       },

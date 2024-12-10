@@ -9,7 +9,7 @@ import { MobileNavigation } from "./MobileNavigation";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Components", href: "/components" },
+  { label: "Components", href: "/docs" },
   { label: "Blocks", href: "/blocks" },
 ];
 
@@ -27,7 +27,7 @@ const social = [
 export default function Navigation() {
   return (
     <header
-      className="bg-tertiary backdrop-blur-3xl lg:rounded-full lg:w-6/12 w-full mx-auto lg:my-6 top-0 sticky z-40 animate-in-reverse shadow-xl h-[var(--header-height)]"
+      className="sticky top-0 h-[var(--header-height)] z-50 p-0 bg-background/60 backdrop-blur border-b border-primary"
       style={{ "--index": 0 } as CSSProperties}
     >
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0 shadow-2xl"></hr>
@@ -41,7 +41,7 @@ export default function Navigation() {
             Comb<span className="font-black">UI</span>
           </span>
         </Link>
-        <nav className="ml-auto">
+        <nav>
           <ul className="hidden md:flex gap-1 items-center justify-center text-center">
             {navItems.map((items) => (
               <li key={items.href}>

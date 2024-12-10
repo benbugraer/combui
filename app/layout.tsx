@@ -53,19 +53,17 @@ export default function RootLayout({
           outfit.className
         )}
       >
-        <RootProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navigation />
-            <div className="relative flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip mx-auto px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-              {children}
-            </div>
-          </ThemeProvider>
-        </RootProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          <div className="relative flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip mx-auto px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+            <RootProvider>{children}</RootProvider>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
