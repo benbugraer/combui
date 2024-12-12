@@ -1,6 +1,25 @@
-import { defineDocs } from "fumadocs-mdx/config";
+import {
+  defineDocs,
+} from "fumadocs-mdx/config";
+import { defineConfig } from "fumadocs-mdx/config";
+import { remarkInstall } from "fumadocs-docgen";
+export default defineConfig({
+  mdxOptions: {
+    remarkPlugins: [
+      [
+        remarkInstall,
+        {
+          persist: {
+            id: "persist-install",
+          },
+        },
+      ],
+    ],
+  },
+});
 
-// define `docs` and `meta` collections
+
+
 export const { docs, meta } = defineDocs({
-  dir: "content/docs",
+  dir: "./content/docs",
 });

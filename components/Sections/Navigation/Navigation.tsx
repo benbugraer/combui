@@ -9,7 +9,7 @@ import { MobileNavigation } from "./MobileNavigation";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Components", href: "/docs" },
+  { label: "Components", href: "/docs/introduction" },
   { label: "Blocks", href: "/blocks" },
 ];
 
@@ -27,7 +27,7 @@ const social = [
 export default function Navigation() {
   return (
     <header
-      className="sticky top-0 h-[var(--header-height)] z-50 p-0 bg-background/60 backdrop-blur border-b border-primary"
+      className="sticky top-0 h-[var(--header-height)] z-50 p-0 bg-primary backdrop-blur border-b border-primary"
       style={{ "--index": 0 } as CSSProperties}
     >
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0 shadow-2xl"></hr>
@@ -56,7 +56,7 @@ export default function Navigation() {
               target="_blank"
               key={social.url}
               href={social.url}
-              className="inline-flex text-tertiary items-center justify-center  text-sm font-medium transition-colors  rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary duration-500 hover:duration-500 hover:text-accent-foreground h-9 py-2 w-9"
+              className="inline-flex text-tertiary items-center justify-center  text-sm font-medium transition-colors  rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-tertiary duration-500 hover:duration-500 hover:text-accent-foreground h-9 py-2 w-9"
             >
               {social.icon}
             </a>

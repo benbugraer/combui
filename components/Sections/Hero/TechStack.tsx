@@ -1,3 +1,5 @@
+"use client";
+
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import TypeScript from "@/public/Icons/TypeScriptIcon";
 import Nextjs from "@/public/Icons/NextIcon";
@@ -5,10 +7,22 @@ import TailwindCSS from "@/public/Icons/TailwindIcon";
 import { SimpleIconsShadcnui } from "@/public/Icons/ShadcnIcon";
 import { TablerBrandFramerMotion } from "@/public/Icons/MotionIcon";
 import RadixUI from "@/public/Icons/RadixIcon";
+import { motion, useInView } from "framer-motion"; // Add useInView import
+import { useRef } from "react";
+
+const ease = [0.16, 1, 0.3, 1];
 
 export function TechStack() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 1 });
   return (
-    <div className="flex flex-col justify-center items-center mt-44">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: -20 }}
+      animate={isInView ? { opacity: 3, y: 0 } : { opacity: 0, y: -60 }}
+      transition={{ duration: 4, ease }}
+      className="flex flex-col justify-center items-center mt-44"
+    >
       <h2 className="mt-2 font-semibold tracking-tight text-primary text-2xl sm:text-2xl md:text-3xl lg:text-4xl">
         CombUI Creation Kit:
       </h2>
@@ -17,7 +31,7 @@ export function TechStack() {
         Nextjs Starter Kit
       </p>
       <HoverEffect items={projects} />
-    </div>
+    </motion.div>
   );
 }
 

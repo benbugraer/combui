@@ -49,7 +49,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={clsx(
-          "antialiased bg-contrast text-primary",
+          "antialiased bg-primary text-primary",
           outfit.className
         )}
       >
@@ -60,7 +60,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navigation />
-          <div className="relative flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip mx-auto px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+          <div className="">
             <RootProvider>{children}</RootProvider>
           </div>
         </ThemeProvider>

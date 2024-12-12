@@ -1,5 +1,7 @@
 import { toRuntime, toRuntimeAsync } from "fumadocs-mdx"
-import * as docs_0 from "../content/docs/index.mdx?collection=docs&hash=49483a3b98233c0a50019b837f10715ed34f094c3e01b4e5af6d32182a9817bc"
-import * as docs_1 from "../content/docs/try.mdx?collection=docs&hash=49483a3b98233c0a50019b837f10715ed34f094c3e01b4e5af6d32182a9817bc"
-export const docs = [toRuntime("doc", docs_0, {"path":"index.mdx","absolutePath":"C:/Users/bugra/OneDrive/Masaüstü/combui/content/docs/index.mdx"}), toRuntime("doc", docs_1, {"path":"try.mdx","absolutePath":"C:/Users/bugra/OneDrive/Masaüstü/combui/content/docs/try.mdx"})];
-export const meta = [];
+import * as docs_0 from "../content/docs/installation.mdx?collection=docs&hash=b6a9c1e1b30648fc99ecad0236955087d980fe8a0259cfdaa3f5dc6aa5398390"
+import * as docs_1 from "../content/docs/introduction.mdx?collection=docs&hash=b6a9c1e1b30648fc99ecad0236955087d980fe8a0259cfdaa3f5dc6aa5398390"
+import * as docs_2 from "../content/docs/components/try.mdx?collection=docs&hash=b6a9c1e1b30648fc99ecad0236955087d980fe8a0259cfdaa3f5dc6aa5398390"
+import * as meta_0 from "../content/docs/meta.json?collection=meta&hash=b6a9c1e1b30648fc99ecad0236955087d980fe8a0259cfdaa3f5dc6aa5398390"
+export const docs = [toRuntime("doc", docs_0, {"path":"installation.mdx","absolutePath":"C:/Users/bugra/OneDrive/Masaüstü/Coding/combui/content/docs/installation.mdx"}), toRuntime("doc", docs_1, {"path":"introduction.mdx","absolutePath":"C:/Users/bugra/OneDrive/Masaüstü/Coding/combui/content/docs/introduction.mdx"}), toRuntime("doc", docs_2, {"path":"components\\try.mdx","absolutePath":"C:/Users/bugra/OneDrive/Masaüstü/Coding/combui/content/docs/components/try.mdx"})];
+export const meta = [toRuntime("meta", meta_0, {"path":"meta.json","absolutePath":"C:/Users/bugra/OneDrive/Masaüstü/Coding/combui/content/docs/meta.json"})];

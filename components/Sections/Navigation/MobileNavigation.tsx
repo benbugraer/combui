@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "Components", href: "/components" },
+  { label: "Components", href: "/docs/introduction" },
   { label: "Blocks", href: "/blocks" },
 ];
 
@@ -24,7 +24,7 @@ export function MobileNavigation() {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          className="group ml-auto md:hidden bg-primary"
+          className="group ml-auto md:hidden inline-flex items-center rounded-full space-x-2 bg-tertiary dark:bg-tertiary dark:hover:bg-secondary px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-muted"
           variant="outline"
           size="icon"
           aria-expanded={open}
@@ -57,15 +57,18 @@ export function MobileNavigation() {
           </svg>
         </Button>
       </PopoverTrigger>
-      <PopoverContent align="end" className="w-40 p-2  rounded-md">
+      <PopoverContent
+        align="end"
+        className="w-40 p-2  rounded-lg bg-primary dark:bg-primary"
+      >
         <div className="grid">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "px-4 py-2 rounded-md hover:text-primary text-sm transition-colors",
-                pathname === link.href ? "bg-secondary" : "font-light"
+                "px-4 py-2 rounded-lg hover:text-primary text-sm transition-colors",
+                pathname === link.href ? "bg-tertiary" : "font-light"
               )}
             >
               {link.label}

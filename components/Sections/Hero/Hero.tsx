@@ -259,7 +259,7 @@ function HeroVideo() {
       className="relative mx-auto flex w-full items-center justify-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.2, duration: 1, ease }}
+      transition={{ delay: 2.2, duration: 1, ease }}
     >
       <HeroVideoDialog
         animationStyle="from-center"
