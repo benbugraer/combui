@@ -207,7 +207,7 @@ function HeroCTA() {
         }}
         transition={{ duration: 0.8, ease: ease }}
       >
-        <Link href="/components">
+        <Link href="/docs/introduction">
           <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl items-center justify-center sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
             <ClarityBlocksGroupSolid
               className="-ms-1 me-2 "

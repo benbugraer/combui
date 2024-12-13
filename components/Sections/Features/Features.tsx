@@ -54,7 +54,7 @@ export default function Features() {
       ref={ref}
       initial={{ opacity: 0, y: -20 }}
       animate={isInView ? { opacity: 3, y: 0 } : { opacity: 0, y: -60 }}
-      transition={{ duration: 4, ease }}
+      transition={{ duration: 1.5, ease }}
       className="overflow-hidden mt-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
