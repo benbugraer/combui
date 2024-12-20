@@ -11,8 +11,13 @@ type NavLinkProps = Readonly<{
 }>;
 
 export default function NavLinks({ href, children }: NavLinkProps) {
-  const pathname = `/${usePathname()?.split("/")[1] ?? ""}`;
-  const active = pathname === href;
+  const pathname = usePathname();
+
+  // Eğer href docs ile başlıyorsa ve pathname de docs ile başlıyorsa aktif olarak işaretle
+  const active = href.startsWith("/docs")
+    ? pathname?.startsWith("/docs")
+    : pathname === href;
+
   return (
     <Link
       href={href}

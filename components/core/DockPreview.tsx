@@ -1,13 +1,3 @@
----
-title: Dock Preview
-description: Components
----
-
-import DockPreviewComponent from "@/content/core/dock-preview";
-
-<DockPreviewComponent />
-
-```jsx title="DockPreview.tsx"
 "use client";
 
 import React, { PropsWithChildren, useRef } from "react";
@@ -37,7 +27,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "mx-auto w-max mt-8 h-[58px] p-2 flex items-end gap-2 rounded-2xl border dark:border-[#707070]"
+  "mx-auto w-max mt-8 bg-neutral-900 flex items-end rounded-full"
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -128,7 +118,7 @@ const DockIcon = ({
       ref={ref}
       style={{ width }}
       className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center rounded-full bg-neutral-400/40",
+        "flex aspect-square cursor-pointer items-center justify-center rounded-full bg-black dark:bg-white ",
         className
       )}
       {...props}
@@ -227,7 +217,7 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
-          className={cn("text-black dark:text-white", className)}
+          className={cn("text-white dark:text-black", className)}
           href={url}
         >
           {children}
@@ -261,7 +251,7 @@ export const LinkPreview = ({
               >
                 <Link
                   href={url}
-                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
+                  className="block p-1 bg-white border border-transparent shadow rounded-xl hover:border-neutral-900 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
                 >
                   <Image
@@ -271,7 +261,7 @@ export const LinkPreview = ({
                     quality={quality}
                     layout={layout}
                     priority={true}
-                    className="rounded-lg"
+                    className="rounded-xl"
                     alt="preview image"
                   />
                 </Link>
@@ -299,5 +289,3 @@ export const DockPreview = ({ url, children, className }: DockPreviewProps) => (
 );
 
 export { Dock, DockIcon, dockVariants };
-
-```

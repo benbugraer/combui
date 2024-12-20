@@ -60,7 +60,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navigation />
-          <div className="">
+          <div>
             <RootProvider>{children}</RootProvider>
           </div>
         </ThemeProvider>

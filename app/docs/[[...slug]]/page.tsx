@@ -59,7 +59,7 @@ export default async function Page({
             Tabs,
             AutoTypeTable,
 
-            iframe: (props) => <iframe {...props} className="w-full " />,
+            iframe: (props) => <iframe {...props} className="w-full" />,
           }}
         />
       </DocsBody>
