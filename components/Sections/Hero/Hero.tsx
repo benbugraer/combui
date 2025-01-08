@@ -12,9 +12,9 @@ import { SimpleIconsShadcnui } from "@/public/Icons/ShadcnIcon";
 import TailwindCSS from "@/public/Icons/TailwindIcon";
 import { cn } from "@/lib/utils";
 import { AnimatedTooltip } from "../../ui/animated-tooltip";
-import HeroVideoDialog from "../../ui/hero-video-dialog";
 import { QlementineIconsBlocks16 } from "@/public/Icons/BlocksIcon";
 import { ClarityBlocksGroupSolid } from "@/public/Icons/ComponentsIcon";
+import Features from "./Features";
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -98,19 +98,6 @@ function HeroTitles() {
         )}
       </motion.h1>
       <motion.div className="mx-auto max-w-xl text-center leading-7 text-muted-foreground flex">
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 1.4, // Increased delay to appear after title
-            duration: 0.8,
-            ease,
-          }}
-          className="mr-3"
-        >
-          Beatiful components with:
-        </motion.span>
-
         <motion.span
           className="flex gap-2"
           variants={{
@@ -207,7 +194,7 @@ function HeroCTA() {
         }}
         transition={{ duration: 0.8, ease: ease }}
       >
-        <Link href="/docs/introduction">
+        <Link href="/docs/introduction" prefetch={true}>
           <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl items-center justify-center sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
             <ClarityBlocksGroupSolid
               className="-ms-1 me-2 "
@@ -232,7 +219,7 @@ function HeroCTA() {
         }}
         transition={{ duration: 0.8, ease: ease }}
       >
-        <Link href="/blocks">
+        <Link href="/blocks" prefetch={true}>
           <Button className="group rounded-full  mx-auto mt-3 flex max-w-2xl  items-center justify-center sm:mt-6 sm:flex-row sm:space-x-4 sm:space-y-0 bg-black text-white hover:bg-tertiary hover:text-primary dark:bg-white dark:text-black dark:hover:bg-tertiary dark:hover:text-primary duration-500 ease-linear transition-all hover:transition-colors hover:duration-300">
             <QlementineIconsBlocks16
               className="-ms-1 me-2"
@@ -253,33 +240,14 @@ function HeroCTA() {
   );
 }
 
-function HeroVideo() {
-  return (
-    <motion.div
-      className="relative mx-auto flex w-full items-center justify-center"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 2.2, duration: 1, ease }}
-    >
-      <HeroVideoDialog
-        animationStyle="from-center"
-        videoSrc="https://www.youtube.com/embed/25IzTkU3En4"
-        thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
-        thumbnailAlt="Thumbnail"
-        className="border-2 border-primary rounded-lg shadow-lg max-w-screen-lg mt-16"
-      />
-    </motion.div>
-  );
-}
-
 export default function HeroSection() {
   return (
     <section id="hero">
-      <div className="relative flex w-full flex-col items-center justify-start px-4 pt-16 sm:px-6 sm:pt-24 md:pt-12 lg:px-8 ">
+      <div className="relative flex w-full flex-col items-center justify-start px-4 pt-16 sm:px-6 sm:pt-24 md:pt-24 lg:px-8 ">
         <HeroCreated />
         <HeroTitles />
         <HeroCTA />
-        <HeroVideo />
+        <Features />
       </div>
     </section>
   );

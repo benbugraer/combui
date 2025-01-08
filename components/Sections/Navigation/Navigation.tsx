@@ -9,8 +9,8 @@ import { MobileNavigation } from "./MobileNavigation";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Components", href: "/docs/introduction" },
-  { label: "Blocks", href: "/blocks" },
+  { label: "Components", href: "/docs/introduction", prefetch: true },
+  { label: "Blocks", href: "/blocks", prefetch: true },
 ];
 
 const social = [
@@ -32,9 +32,10 @@ export default function Navigation() {
     >
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-neutral-200/0 via-neutral-200/30 to-neutral-200/0 shadow-2xl"></hr>
 
-      <div className="container flex h-12 items-center">
+      <div className="container flex h-16 items-center">
         <Link
           href="/"
+          prefetch={true}
           className="relative text-lg font-normal tracking-tighter flex items-center space-x-0"
         >
           <span className="text-primary">

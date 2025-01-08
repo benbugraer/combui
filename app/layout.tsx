@@ -15,6 +15,30 @@ export const metadata: Metadata = {
   title: "CombUI | Modern UI Component Library",
   description:
     "A modern UI component library for Next.js applications with beautiful, responsive and accessible components",
+  icons: {
+    icon: [
+      { url: "/logo/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      {
+        url: "/logo/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+    other: [
+      {
+        rel: "android-chrome-192x192",
+        url: "/logo/android-chrome-192x192.png",
+      },
+      {
+        rel: "android-chrome-512x512",
+        url: "/logo/android-chrome-512x512.png",
+      },
+    ],
+  },
+  manifest: "/logo/site.webmanifest",
   openGraph: {
     title: "CombUI | Modern UI Component Library",
     description:

@@ -5,9 +5,23 @@ description: Components
 
 import DockPreviewComponent from "@/content/core/dock-preview";
 
+### Preview
+
 <DockPreviewComponent />
 
-```jsx title="DockPreview.tsx"
+### Installation
+
+For this component you can install `react-icons` for the icons. But you can use any icon library you want. Don't forget to customize the icons.
+
+```package-install
+react-icons
+```
+
+### Source Code
+
+You can create `components/core/DockPreview.tsx` file and add this code.
+
+```tsx title="DockPreview.tsx"
 "use client";
 
 import React, { PropsWithChildren, useRef } from "react";
@@ -37,7 +51,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "mx-auto w-max mt-8 h-[58px] p-2 flex items-end gap-2 rounded-2xl border dark:border-[#707070]"
+  "mx-auto w-max mt-8 bg-neutral-900 border border-neutral-800 flex items-end rounded-full"
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -128,7 +142,7 @@ const DockIcon = ({
       ref={ref}
       style={{ width }}
       className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center rounded-full bg-neutral-400/40",
+        "flex aspect-square cursor-pointer items-center justify-center rounded-full bg-black dark:bg-white ",
         className
       )}
       {...props}
@@ -198,7 +212,7 @@ export const LinkPreview = ({
   const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const targetRect = (event.target as HTMLElement).getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2;
     x.set(offsetFromCenter);
   };
 
@@ -227,7 +241,7 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
-          className={cn("text-black dark:text-white", className)}
+          className={cn("text-white dark:text-black", className)}
           href={url}
         >
           {children}
@@ -261,7 +275,7 @@ export const LinkPreview = ({
               >
                 <Link
                   href={url}
-                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
+                  className="block p-1 bg-white border border-transparent shadow rounded-xl hover:border-neutral-900 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
                 >
                   <Image
@@ -271,7 +285,7 @@ export const LinkPreview = ({
                     quality={quality}
                     layout={layout}
                     priority={true}
-                    className="rounded-lg"
+                    className="rounded-xl"
                     alt="preview image"
                   />
                 </Link>
@@ -299,5 +313,32 @@ export const DockPreview = ({ url, children, className }: DockPreviewProps) => (
 );
 
 export { Dock, DockIcon, dockVariants };
-
 ```
+
+### Usage Example
+
+```tsx title="dock-preview-usage.tsx"
+import { SiReact, SiNextdotjs, SiTailwindcss, SiGithub } from "react-icons/si";
+import { DockPreview } from "@/components/core/DockPreview";
+
+export default function DockPreviewComponent() {
+  const dockItems = [
+    { url: "https://reactjs.org/", icon: SiReact },
+    { url: "https://nextjs.org/", icon: SiNextdotjs },
+    { url: "https://tailwindcss.com/", icon: SiTailwindcss },
+    { url: "https://github.com/", icon: SiGithub },
+  ];
+
+  return (
+    <div className="relative flex h-[500px] w-full gap-4 items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      {dockItems.map(({ url, icon: Icon }) => (
+        <DockPreview url={url} key={url}>
+          <Icon className="w-5 h-5" />
+        </DockPreview>
+      ))}
+    </div>
+  );
+}
+```
+
+That's all u can ready to use this component.

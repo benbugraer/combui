@@ -1,10 +1,9 @@
 "use client";
-import { useRef } from "react";
 import { Plus, Copy } from "lucide-react";
 import { SolarLibraryBold } from "@/public/Icons/LibraryIcon";
 import { ClarityBlocksGroupSolid } from "@/public/Icons/ComponentsIcon";
 import { UisWebGrid } from "@/public/Icons/WebIcon";
-import { motion, useInView } from "framer-motion"; // Add useInView import
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -46,28 +45,39 @@ const features = [
 const ease = [0.16, 1, 0.3, 1];
 
 export default function Features() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 1 });
-
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: -20 }}
-      animate={isInView ? { opacity: 3, y: 0 } : { opacity: 0, y: -60 }}
-      transition={{ duration: 1.5, ease }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease }}
       className="overflow-hidden mt-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="lg:pr-8 lg:pt-4">
+          <motion.div
+            className="lg:pr-8 lg:pt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease }}
+          >
             <div className="lg:max-w-lg">
-              <h1 className="mt-2 font-semibold tracking-tight text-2xl">
+              <motion.h1
+                className="mt-2 font-semibold tracking-tight text-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease }}
+              >
                 Best way to look good in your projects with CombUI
-              </h1>
-              <p className="mt-6 leading-8 text-gray-600 dark:text-gray-400">
+              </motion.h1>
+              <motion.p
+                className="mt-6 leading-8 text-gray-600 dark:text-gray-400"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6, ease }}
+              >
                 CombUI is a modern UI component library for Next.js
                 applications.
-              </p>
+              </motion.p>
               <div className="mt-10">
                 <Accordion
                   type="single"
@@ -116,7 +126,7 @@ export default function Features() {
                 </Accordion>
               </div>
             </div>
-          </div>
+          </motion.div>
           <FeatureCircle />
         </div>
       </div>

@@ -1,13 +1,15 @@
 import HeroSection from "@/components/Sections/Hero/Hero";
-import Features from "@/components/Sections/Features/Features";
 import { TechStack } from "@/components/Sections/Hero/TechStack";
+import Footer from "@/components/Sections/Footer/Footer";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <Features />
-      <TechStack />
+      <section>
+        <TechStack />
+      </section>
+      <Footer />
     </main>
   );
 }

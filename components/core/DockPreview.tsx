@@ -27,7 +27,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "mx-auto w-max mt-8 bg-neutral-900 flex items-end rounded-full"
+  "mx-auto w-max mt-8 bg-neutral-900 border border-neutral-800 flex items-end rounded-full"
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -188,7 +188,7 @@ export const LinkPreview = ({
   const handleMouseMove = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const targetRect = (event.target as HTMLElement).getBoundingClientRect();
     const eventOffsetX = event.clientX - targetRect.left;
-    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
+    const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2;
     x.set(offsetFromCenter);
   };
 
