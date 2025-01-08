@@ -10,7 +10,7 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { FeatureCircle } from "./FeatureCircle";
+import { FeatureCircle } from "../Features/FeatureCircle";
 
 const features = [
   {
